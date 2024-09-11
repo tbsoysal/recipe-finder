@@ -1,0 +1,31 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  font-family: arial, sans-serif;
+}
+
+div {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+
+
+div h2 {
+  text-align: center;
+}
+
+div img {
+  display: block;
+  margin-inline: auto;
+  width: 300;
+}
+
+div ul {
+  padding: 1.5rem;
+}
+
+div ul li {
+  list-style-type: square;
+}
