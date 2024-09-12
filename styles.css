@@ -98,10 +98,15 @@ form button {
 }
 
 .data img {
-  display: block;
   width: 30%;
+  display: block;
   max-height: 10rem;
   object-fit: cover;
+}
+
+.data .content-container {
+  flex: 1 1 0;
+  width: 70%;
 }
 
 .data .content-container h2 {
@@ -116,4 +121,26 @@ form button {
 
 .data .content-container ul {
   padding-left: 1rem;
+}
+
+@media (min-width: 750px) {
+  .container {
+    max-width: 950px;
+    margin-inline: auto;
+    margin-top: 2rem;
+    padding-inline: 1rem;
+  }
+
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .data .content-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .data ul li {
+    font-size: 1.5rem;
+  }
 }
