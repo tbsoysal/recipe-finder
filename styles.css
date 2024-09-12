@@ -62,14 +62,26 @@ form button {
   gap: 2rem;
 }
 
-.data-list .data {
+.data {
   display: flex;
   gap: 1rem;
+}
+
+.data img {
+  display: block;
+  width: 30%;
+  max-height: 10rem;
+  object-fit: cover;
 }
 
 .data .content-container h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+}
+
+.data .content-container h2 a {
+  color: green;
+  text-decoration: none;
 }
 
 .data .content-container ul {
