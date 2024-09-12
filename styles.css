@@ -21,16 +21,46 @@ body {
   font-size: 0.6rem;
 }
 
+@keyframes slideInFromLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .text-container h1 {
   margin-bottom: 1rem;
+}
+
+.text-container h1:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: 1s ease-out 0.5s 1 slideInFromLeft forwards;
+}
+
+.text-container h1:nth-child(2) {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: 1s ease-out 1.5s 1 slideInFromBottom forwards;
 }
 
 form {
   position: relative;
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: 1s ease-out 2.5s 1 slideInFromBottom forwards;
 }
 
 form input {
+  font-family: Arial, Helvetica, sans-serif;
   display: block;
   width: 100%;
   height: 3rem;

@@ -1,10 +1,13 @@
 const form = document.querySelector('form');
 const input = document.querySelector('form input');
+const dataListEl = document.querySelector('.data-list'); // ul
 
 // Create a event listener for form submit
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
+  const reloading = `<h2 style="text-align:center;">Loading...</h2>`;
+  dataListEl.innerHTML = reloading;
   const search_keyword = input.value;
   ListRecipes(search_keyword);
 })
@@ -19,7 +22,6 @@ async function ListRecipes(keyword) {
 }
 
 function addRecipesToDOM(recipes) {
-  const dataListEl = document.querySelector('.data-list'); // ul
   dataListEl.innerHTML = "";
 
   recipes.map((recipeObj) => {
